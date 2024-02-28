@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@mixin font-kode(){
+    font-family: 'Kode Mono', sans-serif;
+}
+
+@mixin font-ubuntu(){
+    font-family: 'Ubuntu Mono', sans-serif;
+}
+
+@mixin font-space(){
+    font-family: 'Space Mono', sans-serif;
+}
+
+h1, .h1 {
+    font-size: 3rem;
+    color: $purple;
+}
+
+h2, .h2 {
+    font-size: 2.5rem;
+    color: $purple;
+}
+
+h3, .h3 {
+    font-size: 2rem;
+    color: $purple;
+}
+
+h4, .h4 {
+    font-size: 1.75rem;
+    color: $purple;
+}
+
+h5, .h5 {
+    font-size: 1.5rem;
+    color: $purple;
+}
+
+h6, .h6 {
+    font-size: 1.25rem;
+    color: $purple;
+}
+
+.code {
+    @include font-kode();
+}
+
+.error {
+    color: $red;
+}
+
+.em {
+    color: $blue;
+}
+
+.var {
+    font-weight: 700;
+    background-color: $white;
+    color: $black;
+    padding: $bs-padding / 4;
+}

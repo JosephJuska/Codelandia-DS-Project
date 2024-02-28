@@ -1,0 +1,33 @@
+@mixin respond-to-min($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }@else {
+        @error "Invalid breakpoint: #{$breakpoint}.";
+    }
+}
+
+@mixin respond-to-max($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (max-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }@else {
+        @error "Invalid breakpoint: #{$breakpoint}.";
+    }
+}
+
+@mixin flex($flex-direction: row, $align-items: center, $justify-content: center, $flex-wrap: nowrap, $gap: 0){
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    flex-wrap: $flex-wrap;
+    gap: $gap;
+}
+
+@mixin border($border-color: none, $border-width: 0, $border-style: solid, $border-radius: 0){
+    border: $border-width $border-style $border-color;
+    border-radius: $border-radius;
+}

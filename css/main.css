@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+h1, .h1 {
+  font-size: 3rem;
+  color: #B37BA4;
+}
+
+h2, .h2 {
+  font-size: 2.5rem;
+  color: #B37BA4;
+}
+
+h3, .h3 {
+  font-size: 2rem;
+  color: #B37BA4;
+}
+
+h4, .h4 {
+  font-size: 1.75rem;
+  color: #B37BA4;
+}
+
+h5, .h5 {
+  font-size: 1.5rem;
+  color: #B37BA4;
+}
+
+h6, .h6 {
+  font-size: 1.25rem;
+  color: #B37BA4;
+}
+
+.code {
+  font-family: "Kode Mono", sans-serif;
+}
+
+.error {
+  color: #CC3F0C;
+}
+
+.em {
+  color: #14BDEB;
+}
+
+.var {
+  font-weight: 700;
+  background-color: #DCCDE8;
+  color: #00100B;
+  padding: 2.5px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+  font-family: "Space Mono", sans-serif;
+  background-color: #00100B;
+  color: #DCCDE8;
+}
+@media (max-width: 576px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #14BDEB;
+  transition: all 0.5s ease;
+  opacity: 1;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+p {
+  line-height: 3;
+}
+
+button, input, textarea {
+  background: none;
+  border: none;
+  outline: none;
+  color: #DCCDE8;
+}
+
+textarea {
+  border: 2px dotted #DCCDE8;
+  border-radius: 0;
+  padding: 10px;
+  width: 100%;
+  min-height: 150px;
+  resize: none;
+}
+
+button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 0;
+  cursor: pointer;
+  color: #14BDEB;
+  transition: all 0.5s ease;
+  opacity: 1;
+}
+button:hover {
+  opacity: 0.7;
+}
+
+input {
+  background-color: #DCCDE8;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: #00100B;
+}
+
+.container-wrapper {
+  margin: 40px 0;
+}
+
+.container, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
+  margin: 0 auto;
+  padding: 10px;
+  width: 100%;
+}
+
+.container-sm {
+  max-width: 576px;
+}
+
+.container-md {
+  max-width: 768px;
+}
+
+.container-lg {
+  max-width: 992px;
+}
+
+.container-xl {
+  max-width: 1200px;
+}
+
+.container-xxl {
+  max-width: 1400px;
+}
+
+.task {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  border: 2px solid #DCCDE8;
+  border-radius: 0;
+  margin-bottom: 80px;
+}
+.task:last-of-type {
+  margin-bottom: 0;
+}
+.task .task-example-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  padding: 0;
+  margin-bottom: 40px;
+}
+@media (max-width: 576px) {
+  .task .task-example-wrapper {
+    flex-direction: column;
+  }
+}
+.task .task-example-wrapper .task-example {
+  border: 2px solid #DCCDE8;
+  border-radius: 0;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .task .task-example-wrapper .task-example {
+    width: 50%;
+  }
+}
+.task .task-example-wrapper .task-example-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  height: min-content;
+  margin-bottom: 20px;
+}
+.task .task-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+.task .task-input-wrapper .task-input {
+  padding: 0;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+.task .task-input-wrapper .task-input input {
+  width: 100%;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px !important;
+}
+header h1 {
+  margin-bottom: 10px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  padding: 40px 10px !important;
+}

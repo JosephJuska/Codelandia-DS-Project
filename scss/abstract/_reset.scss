@@ -1,0 +1,65 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: $bs-font-size;
+    @include font-space;
+    background-color: $black;
+    color: $white;
+
+    @include respond-to-max('sm'){
+        font-size: calc($bs-font-size - 2px);
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $blue;
+    transition: all .5s ease;
+    opacity: 1;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+p {
+    line-height: 3;
+}
+
+button, input, textarea {
+    background: none;
+    border: none;
+    outline: none;
+    color: $white;
+}
+
+textarea {
+    @include border($border-color: $white, $border-width: 2px, $border-style: dotted);
+    padding: $bs-padding;
+    width: 100%;
+    min-height: 150px;
+    resize: none; 
+}
+
+button {
+    @include flex();
+    cursor: pointer;
+    color: $blue;
+    transition: all .5s ease;
+    opacity: 1;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+input {
+    background-color: $white;
+    border-radius: 20px;
+    padding: $bs-padding $bs-padding * 2;
+    color: $black;
+}

@@ -1,0 +1,47 @@
+.task {
+    @include flex($justify-content: start, $align-items: start, $gap: 1rem, $flex-direction: column);
+    @include border($border-color: $white, $border-width: 2px, $border-style: solid);
+    margin-bottom: $bs-margin * 8;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .task-example-wrapper {
+        @include flex($gap: 2rem);
+        @include respond-to-max('sm'){
+            flex-direction: column;
+        }
+        padding: 0;
+        margin-bottom: $bs-margin * 4;
+
+        .task-example {
+            @include border($border-color: $white, $border-width: 2px, $border-style: solid);
+            width: 100%;
+            @include respond-to-min('md'){
+                width: 50%;
+            }
+
+
+            &-header {
+                @include flex($justify-content: start, $align-items: center, $gap: 2rem);
+                height: min-content;
+                margin-bottom: $bs-margin * 2;
+            }
+        }
+    }
+
+    .task-input-wrapper {
+        @include flex($flex-direction: column, $justify-content: start, $align-items: start, $gap: 1rem);
+
+        .task-input {
+            padding: 0;
+            margin-bottom: $bs-margin;
+            @include flex($justify-content: space-between, $align-items: center, $gap: 2rem);
+
+            input {
+                width: 100%;
+            }
+        }
+    }
+}
